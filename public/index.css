@@ -1,0 +1,139 @@
+@font-face {
+    font-family: SCPB;
+    src: local('Source Code Pro'),
+        url('./fonts/Source Code Pro Bold.ttf') format('TrueType');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    -webkit-tap-highlight-color: #0000;
+    border: none;
+    font-family: SCPB;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    background: #630000;
+}
+
+.box {
+    width: 222px;
+    height:  384px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #AF1D1D;
+    border-radius: 16px;
+    padding: 12px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.column {
+    display: flex;
+    gap: 10px;
+    flex-flow: column;
+}
+
+.button {
+    border-radius: 50%;
+    background: #CF3B3B;
+    color: #ED6767;
+    text-align: center;
+    line-height: 34px;
+    height: 42px;
+    width: 42px;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 5px;
+    cursor: pointer;
+    transition: .4s filter ease,
+        .3s transform ease;
+}
+
+.button:hover {
+    filter: brightness(0.9);
+    transform: scale(1.1);
+}
+
+.screen {
+    margin-bottom: 10px;
+    height: 100px;
+    width: 100%;
+    background: #CF3B3B;
+    border-radius: 16px;
+    padding: 10px;
+}
+
+#answer {
+    color: #ED6767;
+    font-weight: 700;
+    font-size: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    background: none;
+    caret-color: #EDAFAF;
+}
+
+::placeholder {
+    color: #ED6767;
+    opacity: 0.8;
+}
+
+#maybe {
+    color: #ED6767;
+    opacity: 0.7;
+}
+
+::selection {
+    background: #FF888866;
+}
+
+@media (max-width: 235px) and (max-height: 395px) {
+    .box {
+        height: 100%;
+        width: 100%;
+        inset: 0;
+        position: fixed;
+        transform: none;
+        border-radius: 0;
+        padding: 7.5vmin;
+    }
+
+    .row {
+        justify-content: space-between;
+        gap: 1vmin;
+    }
+
+    .column {
+        justify-content: space-between;
+    }
+
+    #answer {
+        font-size: 9vmin;
+    }
+
+    #maybe {
+        font-size: 7vmin
+    }
+
+    .button {
+        height: 18.5vmin;
+        width: 18.5vmin;
+        font-size: 7vmin;
+        line-height: 14vmin;
+    }
+}
