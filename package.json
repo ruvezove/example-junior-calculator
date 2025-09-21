@@ -1,0 +1,25 @@
+{
+  "name": "template-static-page",
+  "version": "1.0.0",
+  "description": "Заготовка для запуска статических страниц с помощью Express на TypeScript с использованием ESNext.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "npx tsc && node dist/server.js"
+  },
+  "keywords": [
+    "template",
+    "static",
+    "esnext"
+  ],
+  "author": "Ruve Zove",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.5.1",
+    "typescript": "^5.9.2"
+  }
+}
